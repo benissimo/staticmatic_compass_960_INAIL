@@ -1,0 +1,46 @@
+-if current_page.include? '/casainail/'
+  = #@conf.inspect
+  - @section_nav = @conf['nav']['section']['casa_inail'][@path[2]]
+-elsif current_page.include? '/internet/'
+  - @section_nav = @conf['nav']['section']['internet'][@path[2]]
+-else
+  - @section_nav = @conf['nav']['section']['punto_cliente'][@path[2]]
+
+- unless @section_nav.nil?
+  #inailport-vertical-nav
+    %ul.inailport-link-list
+      - @section_nav.each do |e|
+        -# HACK: /casainail/applicazioni/ambiente_orso.html, treat as if was /casainail/applicazioni/ambiente/orso/
+        -if current_page.include? e['href'] or (current_page.include? 'ambiente_orso' and e['href'].include? 'ambiente') or (current_page.include? 'consultazione_anagrafica' and e['href'].include? 'consultazione')
+          %li{:class=>'inailport-link-list_selected'}
+            %a{:href => "#{e['href']}", :title=> "vai alla pagina #{e['label']}"}<>
+              = e['label']
+            - if defined? e['nav']
+              - @indented_nav = e['nav']
+            - unless @indented_nav.nil?
+              //name?
+              /%li{:class=>'inailport-link-list_selected inailport-link-list-indent'}
+              %ul.inailport-link-list_2level
+                - @indented_nav.each do |f|
+                  %li{:class=>"#{if current_page.include? f['href'] then 'inailport-link-list_selected' end}"}
+                    %a{:href => "#{f['href']}", :title=> "vai alla pagina #{f['label']}"}<>
+                      = f['label']
+                    -# HACK: only /casainail/applicazioni/ambiente_orso.html has 3rd level when selected
+                    - if defined? f['nav'] and current_page.include? 'ambiente_orso'
+                      - @indented_nav2 = f['nav']
+                    - unless @indented_nav2.nil?
+                      //name?
+                      /%li{:class=>"#{if current_page.include? f['href'] then 'inailport-link-list_selected inailport-link-list-indent' end}"}
+                      %ul.inailport-link-list_3level
+                        - @indented_nav2.each do |g|
+                          %li
+                            %a{:href => "#{g['href']}", :title=> "vai alla pagina #{g['label']}"}<>
+                              = g['label']                  
+        -else 
+          %li
+            %a{:href => "#{e['href']}", :title=> "vai alla pagina #{e['label']}"}<>
+              = e['label']
+    -# HACK: only /puntocliente/utilizza/index.html has note about logging in printed below vertical nav.
+    -if @path[2] == 'utilizza' && @path[3] == 'index.html'
+      .inailport-vertical-nav-info
+        Per accedere ai servizi di Punto Cliente &egrave; necessario effettuare il login.

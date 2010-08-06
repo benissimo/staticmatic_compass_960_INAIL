@@ -1,0 +1,12 @@
+.inailport-titlebar {
+	font-size:1.05em;
+}
+
+.inailport-menu-tab li a{
+  	padding:3px 1.3em;
+	padding-bottom:4px;
+}
+
+#inailport-user-info .inailport-user-profilo {
+	font-size : 0.7em;
+}

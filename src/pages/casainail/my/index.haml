@@ -1,0 +1,26 @@
+-# assign variables
+- @title = 'My Page'
+- @wrapper_class = 'grid' #3 column grid
+- @site_class = 'intranet'
+= partial('includes/setup')
+-# @site_class = 'punto_cliente'
+- @portlets = {'left'=>[],'right'=>[],'middle'=>[]}
+
+- @portlets['left'].push({'name'=>'campagne'})
+-# @portlets['left'].push({'name'=>'spazio_media'})
+
+-@portlets['middle'].push({'name'=>'my_page'})
+-# @portlets['middle'].push({'name'=>'news'})
+
+- @portlets['right'].push({'name'=>'link_puntocliente'})
+- @portlets['right'].push({'name'=>'avvisi_utenza'})
+- @portlets['right'].push({'name'=>'banner'})
+-# @portlets['right'].push({'name'=>'primo_piano'})
+-# @portlets['right'].push({'name'=>'strumenti'})
+-# @portlets['right'].push({'name'=>'piu_ricercati'})
+-# @portlets['right'].push({'name'=>'cerca_persone'})
+-# @portlets['right'].push({'name'=>'cerca_strutture'})
+
+
+-# render markup
+= partial('includes/page')

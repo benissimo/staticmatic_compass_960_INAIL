@@ -1,0 +1,29 @@
+!!! Strict
+%html{:xmlns => "http://www.w3.org/1999/xhtml", "xml:lang" => "it", :lang => "it"}
+  %head
+    %title
+      - if @title.nil?
+        = 'untitled'
+      - else
+        = "INAIL - #{@title}"
+    %meta{'http-equiv'=>"Content-Type", 'content'=>"text/html; charset=utf-8"}
+    -if @skeleton
+      -if @debug
+        = stylesheets :application, :debug, :media => :screen
+      -else
+        = stylesheets :application, :media => :screen      
+    -else
+      -if @debug
+        = stylesheets :application, :debug, :inailport, :news, :media => :screen
+      -else
+        = stylesheets :application, :inailport, :news, :media => :screen
+    -# IE only stylesheet
+    /[if IE]
+      = stylesheets :inailport_ie, :media => :screen
+    =# javascripts("jquery-1.4.2", :inail)
+    <script src="../../javascripts/jquery-1.4.2.js" type="text/javascript"></script>
+    <script src="../../javascripts/inail.js" type="text/javascript"></script>
+    
+  %body{:class=>"inailport-#{@site_class}"}
+    %div{:id=>'inailport-wrapper',:class=>"inailport-#{@wrapper_class}"}
+      = yield

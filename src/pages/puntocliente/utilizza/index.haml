@@ -1,0 +1,23 @@
+-# assign variables
+- @title = 'Utilizza'
+- @wrapper_class = 'grid' #3 column grid
+- @site_class = 'punto_cliente'
+- @show_login_form = 1
+= partial('includes/setup')
+- @portlets = {'left'=>[],'right'=>[],'middle'=>[]}
+
+- @portlets['left'].push({'name'=>'campagne'})
+- @portlets['left'].push({'name'=>'spazio_media'})
+
+- @portlets['middle'].push({'name'=>'foto_apertura'})
+- @portlets['middle'].push({'name'=>'news','opts'=>{'title'=>'Sala Stampa'}})
+
+
+- @portlets['right'].push({'name'=>'avvisi_utenza','opts'=>{'closed'=>1}})
+- @portlets['right'].push({'name'=>'banner'})
+- @portlets['right'].push({'name'=>'primo_piano'})
+- @portlets['right'].push({'name'=>'piu_ricercati'})
+
+
+-# render markup
+= partial('includes/page')

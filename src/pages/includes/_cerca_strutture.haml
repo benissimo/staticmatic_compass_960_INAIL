@@ -1,0 +1,12 @@
+.inailport-window
+  .inailport-titlebar
+    .inailport-titlebar-title-panel.inailport-titlebar-button-panel Cerca Strutture
+  .inailport-window-content
+    %form#form_cerca_strutture.inailport-search-form{:action => "", :method => "post"}
+      %p
+        %label{:for => "cerca_struttura"} Nome Struttura:
+      %p
+        %input#cerca_struttura{:name => "nome_struttura", :tabindex => "30", :title => "inserisci il nome della struttura da ricercare", :type => "text", :value => ""}/
+      %p
+        %input.inailport-form-button{:name => "Cerca", :tabindex => "31", :title => "esegui la ricerca", :type => "button", :value => "Cerca"}/
+        %input.inailport-form-button{:name => "Avanzate", :tabindex => "32", :title => "esegui la ricerca avanzata", :type => "button", :value => "Avanzate"}/

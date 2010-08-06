@@ -1,0 +1,9 @@
+%div{:class=>"inailport-window #{if (defined? closed) and closed then ' inailport-window-closed' end}"}
+  .inailport-titlebar
+    .inailport-titlebar-title-panel.inailport-titlebar-button-panel
+      Stato Servizi
+  .inailport-window-content
+    .inailport-stato-servizi
+      %img{:src=>"../../images/contents/status_ok.gif",:alt=>"status OK",:title=>"status OK"}
+      %div
+        Tutti i servizi attivi e disponibili

@@ -1,0 +1,45 @@
+-# assign variables
+- @title = 'Skeleton'
+- @wrapper_class = 'full' #3 column grid
+- @debug = 1
+- @skeleton = 1
+- @site_class = 'punto_cliente'
+
+-# render markup
+-# inline documentation
+/[if !IE]
+  DOC: $Id: full.haml 373 2010-04-19 15:04:18Z bellis $
+  
+  Specifics:
+  1024x768 resolution. page built using 960 pixel width layout, centered.
+  1 column layout.
+  
+  To avoid IE6 Ghost Text Bug, any html comments between floated elements should be hidden from IE using the if !IE construct.
+  Reference: http://www.toastedweb.si/docs/ie_ghost_text_bug_fix.html
+  Reference: http://www.positioniseverything.net/explorer/dup-characters.html
+  
+  To avoid IE6 Quirks Mode, document should not emit an xml header.
+  Reference: http://randsco.com/index.php/2007/03/12/about_quirks_mode
+  (NB: webwasher blocks that address)
+
+-# include header
+=partial('includes/header_skeleton')
+/[if !IE]
+  content: section B
+#inailport-content
+  #inailport-content-inner
+    /[if !IE]
+      BOOK = full width (1 column)
+    #inailport-book
+      #inailport-book-container
+        /[if !IE]
+          B - middle column
+        #inailport-main
+          %div
+            %p middle column (placeholder 0)
+
+
+      =# partial('includes/avvisi')
+      =# partial('includes/primopiano')
+-# include footer
+=partial('includes/footer_skeleton')

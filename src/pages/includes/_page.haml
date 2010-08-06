@@ -1,0 +1,53 @@
+-# inline documentation
+/[if !IE]
+  DOC: $Id: grid.haml 23 2010-03-25 11:30:48Z ben $
+  
+  Specifics:
+  1024x768 resolution. page built using 960 pixel width layout, centered.
+  3 column layout.
+  
+  To avoid IE6 Ghost Text Bug, any html comments between floated elements should be hidden from IE using the if !IE construct.
+  Reference: http://www.toastedweb.si/docs/ie_ghost_text_bug_fix.html
+  Reference: http://www.positioniseverything.net/explorer/dup-characters.html
+  
+  To avoid IE6 Quirks Mode, document should not emit an xml header.
+  Reference: http://randsco.com/index.php/2007/03/12/about_quirks_mode
+  (NB: webwasher blocks that address)
+
+-# include header
+=partial('includes/header')
+/[if !IE]
+  content: section B
+#inailport-content
+  -# content-inner may be needed. waiting on OK from Andrea Pretara. If needed, align skeleton markup too.
+  #inailport-content-inner
+    /[if !IE]
+      BOOK = sections B1, B2, B3 (left and middle column)
+    #inailport-book
+      #inailport-book-container
+        /[if !IE]
+          B1 - left and middle column
+        #inailport-nav-main
+          = partial('includes/nav_main')
+        /[if !IE]
+          B2 - left column
+        #inailport-nav-section
+          = partial('includes/vertical_nav')
+          - unless @portlets.nil? or @portlets['left'].nil?
+            - @portlets['left'].each do |p|
+              = partial("includes/#{p['name']}", :locals =>p['opts'])
+        /[if !IE]
+          B3 - middle column
+        #inailport-main
+          %div.inailport-box
+            - unless @portlets.nil? or @portlets['middle'].nil?
+              - @portlets['middle'].each do |p|
+                = partial("includes/#{p['name']}", :locals =>p['opts'])
+    /[if !IE]
+      B4 - righthand column
+    #inailport-promo
+      - unless @portlets.nil? or @portlets['right'].nil?
+        - @portlets['right'].each do |p|
+          = partial("includes/#{p['name']}", :locals =>p['opts'])  
+-# include footer
+=partial('includes/footer')

@@ -1,0 +1,472 @@
+# $Id$
+# configuration file for INAIL layout pages
+# YAML format: http://www.yaml.org/
+nav:
+  extra: #supplementary horizontal nav above breadcrumb.
+    casa_inail:
+      -
+        label: ISTITUZIONALE WEB
+        href: '#'
+      -
+        label: NEWSLETTER
+        href: '#'
+      -
+        label: MEDIA/STAMPA
+        href: '#'
+      -
+        label: HELPDESK
+        href: '#'
+    internet:
+      -
+        label: ISTITUZIONALE WEB
+        href: '#'
+      -
+        label: NEWSLETTER
+        href: '#'
+      -
+        label: MEDIA/STAMPA
+        href: '#'
+      -
+        label: HELPDESK
+        href: '#'
+    punto_cliente:
+      -
+        label: CHI SIAMO
+        href: '#'
+      -
+        label: INAIL COMUNICA
+        href: '#'
+      -
+        label: NORMATIVA
+        href: '#'
+      -
+        label: PUBBLICAZIONI
+        href: '#'
+      -
+        label: NEWSLETTER
+        href: '#'        
+  main: #main nav used for horizontal nav
+    casa_inail:
+      -
+        label: PERSONALE
+        href: /casainail/personale/
+      -
+        label: COMMUNITY
+        href: /casainail/community/
+      -
+        label: SERVIZI
+        href: /casainail/servizi/
+      -
+        label: APPLICAZIONI
+        href: /casainail/applicazioni/
+      -
+        label: WEB TEMATICI
+        href: /casainail/web_tematici/
+      -
+        label: MINISITI
+        href: /casainail/minisiti/
+      -
+        label: MY PAGE
+        href: /casainail/my/
+    internet:
+      -
+        label: PERSONALE
+        href: '#'#/internet/personale/
+      -
+        label: COMMUNITY
+        href: /internet/community/
+      -
+        label: SERVIZI
+        href: '#'#/internet/servizi/
+      -
+        label: APPLICAZIONI
+        href: /internet/applicazioni/
+      -
+        label: WEB TEMATICI
+        href: '#'#/internet/web_tematici/
+      -
+        label: MINISITI
+        href: '#'#/internet/minisiti/
+      -
+        label: MY PAGE
+        href: '#'#/casainail/my/
+    punto_cliente:
+      -
+        label: LEGGI
+        href: /puntocliente/leggi/
+      -
+        label: PARTECIPA
+        href: /puntocliente/partecipa/
+      -
+        label: UTILIZZA
+        href: /puntocliente/utilizza/
+  section: #section nav used for vertical nav
+    casa_inail:
+      applicazioni: &APPLICAZIONINAV
+        -
+          label: Amianto Legge 247/2007
+          href: '#'
+        -
+          label: Banca Dati Amianto
+          href: '#'
+        -
+          label: Banca Dati Normativa
+          href: '#'
+        -
+          label: Banca Dati Reinserimento
+          href: '#'
+        -
+          label: Banca Dati Giuffr&egrave;
+          href: '#'
+        -
+          label: CCF
+          href: '#'
+        -
+          label: Contabilit&agrave; HR
+          href: '#'
+        -
+          label: Contenzioso Amministrativo
+          href: '#'
+        -
+          label: Controllo di Gestione
+          href: '/casainail/applicazioni/ambiente.html'
+          nav:
+            -
+              label: Gestione OFA
+              href: '#'
+            -
+              label: Cruscotto Economico Finanzario
+              href: '#'
+            -
+              label: Procedura O.R.S.O.
+              href: '/casainail/applicazioni/ambiente_orso.html'
+              nav:
+                -
+                  label: Procedura
+                  href: '#'
+                -
+                  label: Documenti
+                  href: '#'
+                -
+                  label: News
+                  href: '#'
+                -
+                  label: Attivit&agrave;
+                  href: '#'
+                -
+                  label: Comunichiamo
+                  href: '#'
+                -
+                  label: Utenti
+                  href: '#'
+                -
+                  label: Gestione web
+                  href: '#'
+        -
+          label: Corso Banche Dati
+          href: '#'
+        -
+          label: Data warehouse
+          href: '#'
+        -
+          label: Emeroteca Centrale
+          href: '#'
+        -
+          label: Fisco
+          href: '#'
+        -
+          label: Gestione Consulenti
+          href: '#'
+        -
+          label: GPA
+          href: '#'
+        -
+          label: GPG
+          href: '#'
+        -
+          label: Guida Monaci
+          href: '#'
+        -
+          label: Mutui On Line
+          href: '#'
+        -
+          label: "Prevenzione: Formazione"
+          href: '#'
+        -
+          label: Proc. Back Office ISI
+          href: '#'
+        -
+          label: Programmazione Integrata
+          href: '#'
+        -
+          label: Protesi e Ortesi
+          href: '#'
+        -
+          label: Pubblicazione Atti
+          href: '#'
+        -
+          label: Registro Nazionale MP
+          href: '#'
+        -
+          label: Report Direzionale
+          href: '#'
+        -
+          label: Repository
+          href: '#'
+        -
+          label: Rilevazione trattamenti
+          href: '#'
+        -
+          label: SABS
+          href: '#'
+        -
+          label: SAGI
+          href: '#'
+        -
+          label: Servizi di Sede ISI
+          href: '#'
+        -
+          label: Sportello Unico DURC
+          href: '#'
+        -
+          label: Telelavoro
+          href: '#'
+        -
+          label: Validazione Parcella
+          href: '#'
+          
+      minisiti:
+        -
+          label: Organi - Organismi
+          href: '#'
+        -
+          label: Direzioni Centrali
+          href: '#'
+        -
+          label: Consulenze Centrali
+          href: '#'
+        -
+          label: Direzioni Regionali
+          href: '#'
+        -
+          label: Comitati
+          href: '#'
+        -
+          label: Centri Riabilitazione Protesi
+          href: '#'
+      servizi:
+        -
+          label: FTP Server
+          href: '#'
+        -
+          label: Gruppi di lavoro SharePoint
+          href: '#'
+        -
+          label: Mailing Listi Pubbl.
+          href: '#'
+        -
+          label: Statistiche
+          href: '#'
+        -
+          label: Agenda Direttori Centrali e Regionali
+          href: '#'
+        -
+          label: Agenda Telemedicina
+          href: '#'
+        -
+          label: Avvocatura
+          href: '#'
+        -
+          label: Collegamento a VARIUS
+          href: '#'
+        -
+          label: Console di profilazione
+          href: '#'
+        -
+          label: Gestione Utenti/Unita'
+          href: '#'
+        -
+          label: InfoCamere
+          href: '#'
+        -
+          label: Servizi INAIL per le comunicazioni multicanali
+          href: '#'
+        -
+          label: Discoremoto
+          href: '#'
+        -
+          label: eLearning
+          href: '#'
+      web_tematici:
+        -
+          label: Ambiente Prevenzione
+          href: '#'
+        -
+          label: Area Fonia
+          href: '#'
+        -
+          label: Cartella Clinica
+          href: '#'
+        -
+          label: Contratti di locazione
+          href: '#'
+        -
+          label: Dismissione Immobili
+          href: '#'
+        -
+          label: Formazione Informatica
+          href: '#'
+        -
+          label: Gest. documentale integrata
+          href: '#'
+        -
+          label: Modulistica
+          href: '#'
+        -
+          label: Prevenzione - Buone Prassi
+          href: '#'
+        -
+          label: Procedure Aziende
+          href: '#'
+        -
+          label: Procedure C.C.I.
+          href: '#'
+        -
+          label: Procedure Prestazioni
+          href: '#'
+        -
+          label: Sicurezza
+          href: '#'
+        -
+          label: Videocomunicazione
+          href: '#'
+        -
+          label: Rivista Infortuni
+          href: '#'
+        -
+          label: INAIL Informa
+          href: '#'
+      personale:
+        -
+          label: Conferenza dei Dirigenti
+          href: '#'
+        -
+          label: Policy Inail
+          href: '#'
+        -
+          label: Prestiti
+          href: '#'
+        -
+          label: Statistiche
+          href: '#'
+        -
+          label: Sistema valutazione e sviluppo R.U.
+          href: '#'
+      community:
+        -
+          label: Bacheca Sindacale
+          href: '#'
+        -
+          label: Calendario Eventi
+          href: '#'
+        -
+          label: Forum - Newsgroup
+          href: '#'
+        -
+          label: Galleria Fotografica
+          href: '#'
+        -
+          label: Questionari
+          href: '#'
+        -
+          label: Sondaggi
+          href: '#'
+    internet:
+      applicazioni:
+        -
+          label: Emeroteca Centrale
+          href: '#'
+      community:
+        -
+          label: Bacheca Sindacale
+          href: '#'
+        -
+          label: Calendario Eventi
+          href: '#'
+    punto_cliente:
+      leggi:
+        -
+          label: Manuale Aziende
+          href: '#'
+        -
+          label: Manuale Consulenti del Lavoro
+          href: '#'
+        - 
+          label: Manuale Responsabile di Sede
+          href: '#'
+        - 
+          label: Manuale Utente INAIL
+          href: '#'
+        - 
+          label: Manuale Gestione Area Patronati
+          href: '#'
+        - 
+          label: Manuale Strutture Ospedaliere
+          href: '#'
+        - 
+          label: Logo Ufficiale INAIL
+          href: '#'
+        - 
+          label: Modulo OT24
+          href: '#'
+        - 
+          label: Modello DNL TEMP
+          href: '#'
+      partecipa:
+        - 
+          label: Forum 
+          href: '#'
+        - 
+          label: Wiki
+          href: '#'
+        - 
+          label: Contatta l'esperto
+          href: '#'
+      utilizza:
+        -
+          label: Autoliquidazione
+          href: '#'
+        -
+          label: Consultazione
+          href: '/puntocliente/utilizza/consultazione.html'
+          nav:
+            -
+              label: Anagrafica Ditta
+              href: '/puntocliente/utilizza/consultazione_anagrafica.html'
+            -
+              label: Contabile Ditta
+              href: '#'
+            -
+              label: Infortuni Danno Biologico
+              href: '#'
+            -
+              label: Stato Pratica
+              href: '#'
+            -
+              label: Stratto DNA
+              href: '#'
+        -
+          label: Denunce
+          href: '#'
+        -
+          label: Gestione Utente
+          href: '#'
+        -
+          label: Moduli Online
+          href: '#'
+        -
+          label: Ricorsi online
+          href: '#'
+        -
+          label: RLS
+          href: '#'

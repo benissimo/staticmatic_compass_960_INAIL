@@ -1,0 +1,9 @@
+/[if !IE]
+  footer: section C
+#inailport-footer
+  %div
+    %p footer
+  /[if !IE]
+    uncomment to reveal link for verifying that browser (IE) is not invoking quirks mode.
+    %div
+      %p <a href="http://randsco.com/noJS.html" onclick="javascript:m= ( document.compatMode == 'CSS1Compat' ) ? 'Standards' : 'Quirks'; window.alert('Page rendered in '+m+'-mode.'); return false;" title=" Quirks-Mode Check ">Quirks-Mode Check</a>

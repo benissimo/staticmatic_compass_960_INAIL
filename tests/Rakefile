@@ -1,0 +1,25 @@
+require 'rake'
+require 'deadweight'
+
+Deadweight::RakeTask.new do |dw|
+  dw.mechanize = true
+
+  dw.root = 'http://10.5.66.97' #presentation server
+  dw.root = 'http://10.5.67.115:3042' #Ben's dev server
+
+  dw.stylesheets = %w( /stylesheets/application.css /stylesheets/inailport.css /stylesheets/news.css)
+
+  dw.pages = %w( /casainail/applicazioni/index.html /puntocliente/utilizza/index_autenticato.html /puntocliente/utilizza/index.html /puntocliente/leggi/index_personalized.html /casainail/personale/index_personalized.html /casainail/applicazioni/ambiente.html /casainail/applicazioni/ambiente_orso.html /internet/community/index.html /skeleton/full.html /puntocliente/utilizza/index_autenticato_new_button.html )
+  #dw.pages = %w( /casainail/personale/index_personalized.html )
+
+#  dw.pages << proc {
+#    fetch('/login')
+#    form = agent.page.forms.first
+#    form.username = 'username'
+#    form.password = 'password'
+#    agent.submit(form)
+#    fetch('/secret-page')
+#  }
+
+  dw.ignore_selectors = /hover|lightbox/
+end

@@ -1,0 +1,34 @@
+-if current_page.include? '/casainail/'
+  = #@conf.inspect
+  - @extra_nav = @conf['nav']['extra']['casa_inail']
+-elsif current_page.include? '/internet/'
+  - @extra_nav = @conf['nav']['extra']['internet']
+-else
+  - @extra_nav = @conf['nav']['extra']['punto_cliente']
+
+- unless @extra_nav.nil? 
+  %h2.inailport-hidden Men&ugrave; servizi e informazioni
+  %ul#inailport-nav-extra-main
+    - @extra_nav.each do |e|
+      %li<>
+        %a{:href => "#{e['href']}", :title=> "entra in #{e['label']}"}<>
+          = e['label'] 
+        -unless e == @extra_nav.last
+          &nbsp;&nbsp;|
+  -unless @show_login_form
+    -if ((current_page.include? 'personale') || (current_page.include? 'leggi'))
+      %ul#inailport-personal-view
+        -if current_page.include? 'index_personalized'
+          %li.inailport-personal-view-selected
+            %a{:href => "./index_personalized.html", :title => "Visualizzazione Personalizzata"} Visualizzazione Personalizzata
+          %li.inailport-personal-view-unselected
+            %a{:href => "./index.html", :title => "vai alla Visualizzazione STANDARD"} vai alla Visualizzazione STANDARD        
+        -else
+          %li.inailport-personal-view-unselected
+            %a{:href => "./index_personalized.html", :title => "vai alla Visualizzazione Personalizzata"} vai alla Visualizzazione Personalizzata
+          %li.inailport-personal-view-selected
+            %a{:href => "./index.html", :title => "Visualizzazione STANDARD"} Visualizzazione STANDARD
+      
+      
+      
+      

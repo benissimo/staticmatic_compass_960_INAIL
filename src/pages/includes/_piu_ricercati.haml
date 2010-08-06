@@ -1,0 +1,44 @@
+%div{:class=>"inailport-window #{if (defined? closed) and closed then ' inailport-window-closed' end}"}      
+  .inailport-titlebar
+    -if (defined? new_button)
+      .inailport-titlebar-title-panel
+        %a{:href=>"#", :title=>"Chiudi"}
+          %img.inailport-titlebar-button{:src=>"../../images/contents/chiudiBTN.png", :title=> "chiudi", :alt=>"chiudi"}
+        I pi&ugrave; ricercati
+    -else
+      .inailport-titlebar-title-panel.inailport-titlebar-button-panel
+        I pi&ugrave; ricercati
+    -# new_button is the new style required for ease of use with oracle portal.
+  .inailport-window-content
+    .inailport-cloud-tag
+      %ul
+        %li
+          %a.inailport-tagcloud-1{:href => "#", :title => "convenzione"} convenzione
+        %li
+          %a.inailport-tagcloud-1{:href => "#", :title => "certificati"} certificati
+        %li
+          %a.inailport-tagcloud-1{:href => "#", :title => "medici"} medici
+        %li
+          %a.inailport-tagcloud-1{:href => "#", :title => "incidenti"} incidenti
+        %li
+          %a.inailport-tagcloud-1{:href => "#", :title => "plurimi"} plurimi
+        %li
+          %a.inailport-tagcloud-3{:href => "#", :title => "autoliquidazione 2010"} autoliquidazione 2010
+        %li
+          %a.inailport-tagcloud-1{:href => "#", :title => "ispezioni"} ispezioni
+        %li
+          %a.inailport-tagcloud-2{:href => "#", :title => "malattie professionali"} malattie professionali
+        %li
+          %a.inailport-tagcloud-1{:href => "#", :title => "statistiche"} statistiche
+        %li
+          %a.inailport-tagcloud-3{:href => "#", :title => "infortuni"} infortuni
+        %li
+          %a.inailport-tagcloud-2{:href => "#", :title => "lavoro sommerso"} lavoro sommerso
+        %li
+          %a.inailport-tagcloud-4{:href => "#", :title => "prevenzione"} prevenzione
+        %li
+          %a.inailport-tagcloud-2{:href => "#", :title => "incidenti"} incidenti
+        %li
+          %a.inailport-tagcloud-1{:href => "#", :title => "sicurezza sul lavoro disabili"} sicurezza sul lavoro disabili
+        %li
+          %a.inailport-tagcloud-2{:href => "#", :title => "precariato"} precariato

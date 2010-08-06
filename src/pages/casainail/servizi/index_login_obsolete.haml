@@ -1,0 +1,37 @@
+-# assign variables
+- @title = 'Servizi'
+- @wrapper_class = 'grid' #3 column grid
+- @site_class = 'intranet'
+- @show_login_form = 1
+= partial('includes/setup')
+-# @site_class = 'punto_cliente'
+- @portlets = {'left'=>[],'right'=>[],'middle'=>[]}
+
+- @portlets['left'].push({'name'=>'campagne'})
+- @portlets['left'].push({'name'=>'spazio_media'})
+- #@portlets['left'].push({'name'=>'calendario'})
+- #@portlets['left'].push({'name'=>'stato_servizi'})
+
+- @portlets['middle'].push({'name'=>'foto_apertura'})
+- @portlets['middle'].push({'name'=>'news'})
+- #@portlets['middle'].push({'name'=>'ambiente_controllo_news'})
+- #@portlets['middle'].push({'name'=>'forum'})
+- #@portlets['middle'].push({'name'=>'finanza'})
+
+- @portlets['right'].push({'name'=>'link_puntocliente'})
+- @portlets['right'].push({'name'=>'avvisi_utenza'})
+- @portlets['right'].push({'name'=>'banner'})
+-# @portlets['right'].push({'name'=>'concorsi'})
+-# @portlets['right'].push({'name'=>'banda'})
+-# @portlets['right'].push({'name'=>'legale'})
+- @portlets['right'].push({'name'=>'primo_piano'})
+- @portlets['right'].push({'name'=>'strumenti'})
+- @portlets['right'].push({'name'=>'piu_ricercati'})
+- @portlets['right'].push({'name'=>'cerca_persone'})
+- @portlets['right'].push({'name'=>'cerca_strutture'})
+- #@portlets['right'].push({'name'=>'piu_visti'})
+- #@portlets['right'].push({'name'=>'localizzatore_rss'})
+
+
+-# render markup
+= partial('includes/page')

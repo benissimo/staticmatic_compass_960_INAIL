@@ -1,0 +1,8 @@
+*.zip
+.svn/
+site/
+.sass-cache/
+.DS_Store
+*/.svn/
+*/**/.svn/
+tests/result.*

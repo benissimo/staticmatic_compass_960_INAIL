@@ -1,0 +1,31 @@
+#inailport-grandezza-carattere
+  %ul
+    %li
+      %a{:href => "#", :title => "aumenta grandezza carattere"} A+
+    %li
+      %a{:href => "#", :title => "diminuisci grandezza carattere"} A-
+    %li
+      %a{:href => "#", :title => "porta il carattere alla grandezza standard"} A
+#inailport-access-ricerca-links
+  %form{:action => "", :method => "post"}
+    .inailport-access-ricerca
+      %h2.inailport-hidden Ricerca
+      %label{:for => "cerca"} Cerca in INAIL:
+      %input#cerca{:name => "cerca", :tabindex => "6", :title => "Inserisci il testo da cercare", :type => "text"}/
+      %input.inailport-form-text-button{:tabindex => "7", :title => "esegui la ricerca", :type => "button", :value => "Trova "}/
+      %span.inailport-elementodivisorio 
+        |
+      %input.inailport-form-text-button{:tabindex => "8", :title => "esegui una ricerca avanzata", :type => "button", :value => "Ricerca Avanzata"}/
+  .inailport-access-links
+    %h2.inailport-hidden collegamenti utili
+    %a.inailport-text-link{:href => "#", :title => "visualizza la struttura del sito"} Mappa del sito
+    %span.inailport-elementodivisorio 
+      |
+    %a.inailport-text-link{:href => "#", :title => "contatta INAIL"} Contattaci
+    %span.inailport-elementodivisorio 
+      |
+    %a.inailport-text-link{:href => "#", :title => "leggi le note di accessibilit&agrave;"} Accessibilit&agrave;
+    %a{:href => "#", :title => "visualizza il sito web in lingua..."}
+      %img.banda{:alt => "bandierine", :src => "../../images/header/bandierine.png"}/
+    %a{:href => "#", :title => "accedi alla pagina degli RSS"}
+      %img{:alt => "INAIL RSS", :src => "../../images/header/rss.png"}/

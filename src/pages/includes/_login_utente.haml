@@ -1,0 +1,19 @@
+%form#inailport-login{:action => "./index_autenticato.html", :method => "post"}
+  %h2.inailport-hidden Accesso area personale
+  %div
+    %ul#inailport-user-login
+      %li
+        %label{:for => "login_utente"}
+          Utente:
+          %input#login_utente.inailport-user-login-input{:name => "utente", :tabindex => "10", :title => "inserisci il tuo nome utente", :type => "text"}/
+      %li
+        %label{:for => "login_pwd"}
+          Password:
+          %input#login_pwd.inailport-user-login-input{:name => "password", :tabindex => "11", :title => "inserisci la tua password", :type => "password"}/
+      %li
+        %input.inailport-user-login-button{:name => "Accesso", :tabindex => "12", :title => "esegui l'accesso al portale INAIL con le credenziali inserite", :type => "submit", :value => "Entra"}/
+%p#inailport-user-function
+  %a.inailport-text-link{:href => "#", :title => "se hai dimenticato la password, avvia la procedura per recuperarla"} Password dimenticata?
+  \&nbsp;|&nbsp;
+  %a.inailport-text-link{:href => "#", :title => "iscriviti al portale INAIL"} Registrazione
+#inailport-claimInail

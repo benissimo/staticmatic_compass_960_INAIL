@@ -1,0 +1,18 @@
+-# assign variables
+- @title = 'Applicazioni - Ambiente - ORSO'
+- @wrapper_class = 'app' #2 column grid
+- @site_class = 'intranet'
+= partial('includes/setup')
+-# @site_class = 'punto_cliente'
+- @portlets = {'left'=>[],'right'=>[],'middle'=>[]}
+
+- @portlets['left'].push({'name'=>'campagne'})
+- @portlets['left'].push({'name'=>'spazio_media'})
+
+- @portlets['middle'].push({'name'=>'orso'})
+
+
+
+
+-# render markup
+= partial('includes/page')

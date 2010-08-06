@@ -1,0 +1,46 @@
+Testing Ideas
+
+1) check for broken links:
+easy, spidr-raakt.rb checks for failed urls. [DONE]
+
+2) check accessibility of markup and CSS:
+difficult, not possible to completely automate this.
+spidr-raakt.rb performs basic accessibility tests on markup but these are not complete. [PARTIAL]
+
+3) check for broken JS, broken CSS includes
+difficult, spidr-raakt.rb checks for failed urls but that only reveals directly linked files.
+if files were loaded via @import, document.write(), etc. the spidr would not find them.
+note that in this case all files are loaded directly (<link> and <script>) so spidr-raakt.rb is
+sufficient for this current situation. [SUFFICIENT]
+
+4) check for broken images referenced in the markup
+easy, just parse out all img tags and check their src URLs. be sure to resolve relative links and
+keep track of which images get checked so as to avoid redundant checks. [ON HOLD]
+--NB this is made obsolete by (5c) below.
+
+5) check for broken images referenced in the CSS
+difficult, some possible solutions:
+a) automate the web browser and test for any broken images. -- have not found an open source product that does this. For example Selenium, Webrat, Capybara, Watir -- some of these execute javascript, perform various tests on the markup but none of them evaluate the CSS. [NO SOLUTION FOUND. KEEP RESEARCHING?]
+b) automate the web browser and then check server logs for broken image requests -- not practical in this case. [SKIP]
+c) automate the web browser (Firefox) and then check browser error log [DONE] -- discovers ALL missing content
+d) parse all CSS files and match and url() patterns, resolving images relative to CSS location. [CANDIDATE]
+
+NB: (5a) would be the best solution:
+- evaluate all images, from markup, via CSS, via secondary CSS (@import), via JS (document.write(), etc.)
+- evaluate only images actually requested by browser. (if a CSS file contains unused rules that point to broken images, not really important to test for that...)
+
+Instructions for (5c)
+* install Selenium IDE for Firefox
+* clear Firefox error messages (Tools -> Error Console -> Errors, click Clear)
+* from Selenium IDE, load web/tests/selenium/visit_all_pages.html (open test case...)
+* play current test case (Firefox should browse all pages on presentation server)
+* check for errors in console (Tools -> Error Console -> Errors)
+
+6) check for unused CSS (low priority):
+implemented as rake task using deadweight gem. (http://github.com/aanand/deadweight)
+assuming you have installed the following gems:
+  rake, deadweight, mechanize
+
+cd web/tests; rake deadweight
+Output lists unused CSS selectors. [DONE]
+

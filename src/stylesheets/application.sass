@@ -1,0 +1,376 @@
+/* $Id: application.sass 683 2010-05-25 13:32:03Z bellis $
+
+@import compass/utilities/general/reset.sass
+@import compass/utilities/general/clearfix.sass
+@import compass/utilities/text.sass
+@import 960/grid.sass
+
+/* BEGIN global reset
+
++global-reset
+
+/* END global reset
+
+/* BEGIN STRUCTURE
+   ***************************************************************
+
+body
+  text-align: center
+
+/* DEFAULTS
+   !ninesixty_gutter_width = 20px
+   !ninesixty_grid_width = 960px
+   !ninesixty_columns = 12
+   Using instead:
+   24 columns
+   10px gutter width
+   960px grid width
+
+$ninesixty_columns: 24
+
+$ninesixty_gutter_width: 10px
+
+$ninesixty_grid_width: 960px
+
+/* grid = 3 column layout.
+   app = 2 column layout.
+   full = 1 column layout.
+   using 960gs layout framework (abstracted and rendered semantic via compass sass porting)
+   grid uses 12 units per row. See http://960.gs/demo.html for details.
+  
+   NB: the code displayed on 960.gs is not semantic (ex. "grid_4" is a 960 gs class name, clearly too closely tied to presentation).
+   Instead the CSS provided here ports 960.gs rules to semantic names ("breadcrumb", etc.)
+
+.inailport-grid
+  +grid-container
+  text-align: left
+  //header: section A
+  #inailport-header
+    //A1
+    #inailport-access
+      +grid(24, 24)
+      +alpha
+      +omega
+    //A2
+    #inailport-logo-inail
+      +grid(6, 24)
+      +alpha
+      a
+        /* replace-text mixin... */
+        +replace-text(unquote("../images/header/logoINAIL_header.png"))
+        display: block
+        height: 90px
+    //A3
+    #inailport-user
+      +grid(12, 24)
+    //detail of A3
+    #inailport-logo-site
+      +grid(6, 24)
+      +omega
+    //A4
+    #inailport-nav-extra
+      +grid(24, 24)
+      +alpha
+      +omega
+    #inailport-breadcrumb
+      +grid(24, 24)
+      +alpha
+      +omega
+  //content: section B
+  #inailport-content
+    //LEFT and MIDDLE: B1, B2, B3 (everything except for righthand column)
+    #inailport-promo
+      +grid(6, 24)
+      +grid-push(18, 24)
+      +omega
+    #inailport-book
+      //
+      +grid(18, 24)
+      +grid-pull(6, 24)
+      +alpha
+      +clearfix
+      //helpful?
+        B1
+      #inailport-nav-main
+        +grid(18, 24)
+        +alpha
+        +clearfix
+      //B2
+      #inailport-nav-section
+        +grid(4, 24)
+        +alpha
+        +clearfix
+      //B3
+      #inailport-main
+        +grid(14, 24)
+        +omega
+        +clearfix
+    //B4
+  //footer: section C
+  #inailport-footer
+    +grid(24, 24)
+    +alpha
+    +omega
+
+
+
+.inailport-app
+  +grid-container
+  text-align: left
+  //header: section A
+  #inailport-header
+    //A1
+    #inailport-access
+      +grid(24, 24)
+      +alpha
+      +omega
+    //A2
+    #inailport-logo-inail
+      +grid(6, 24)
+      +alpha
+      a
+        /* replace-text mixin... */
+        +replace-text(unquote("../images/header/logoINAIL_header.png"))
+        display: block
+        height: 90px
+    //A3
+    #inailport-user
+      +grid(12, 24)
+    //detail of A3
+    #inailport-logo-site
+      +grid(6, 24)
+      +omega
+    //A4
+    #inailport-nav-extra
+      +grid(24, 24)
+      +alpha
+      +omega
+    #inailport-breadcrumb
+      +grid(24, 24)
+      +alpha
+      +omega
+  //content: section B
+  #inailport-content
+    //LEFT and MIDDLE: B1, B2, B3 (everything except for righthand column)
+    #inailport-book
+      //
+      +grid(24, 24)
+      //+grid-pull(6, 24)
+      +alpha
+      +omega
+      +clearfix
+      //helpful?
+        B1
+      #inailport-nav-main
+        +grid(24, 24)
+        +alpha
+        +omega
+        +clearfix
+      //B2
+      #inailport-nav-section
+        +grid(4, 24)
+        +alpha
+        +clearfix
+      //B3
+      #inailport-main
+        +grid(20, 24)
+        +omega
+        +clearfix
+    //B4
+  //footer: section C
+  #inailport-footer
+    +grid(24, 24)
+    +alpha
+    +omega
+
+.inailport-full
+  +grid-container
+  text-align: left
+  //header: section A
+  #inailport-header
+    //A1
+    #inailport-access
+      +grid(24, 24)
+      +alpha
+      +omega
+    //A2
+    #inailport-logo-inail
+      +grid(6, 24)
+      +alpha
+    //A3
+    #inailport-user
+      +grid(12, 24)
+    //detail of A3
+    #inailport-logo-site
+      +grid(6)
+      +omega
+    //A4
+    #inailport-nav-extra
+      +grid(24, 24)
+      +alpha
+      +omega
+    #inailport-breadcrumb
+      +grid(24, 24)
+      +alpha
+      +omega
+  //content: section B
+  #inailport-content
+    #inailport-book
+      //B - 1 column
+      +grid(24, 24)
+      +alpha
+      +omega
+      +clearfix
+  //footer: section C
+  #inailport-footer
+    +grid(24, 24)
+    +alpha
+    +omega
+
+#inailport-main
+  div.inailport-box
+    border:
+      left: 1px solid #cccccc
+      right: 1px solid #cccccc
+    padding: 0 10px
+    +clearfix
+    height: 100%
+    
+    
+/* some override rules for inailport-app */
+.inailport-app 
+  #inailport-main 
+    div.inailport-box
+      /* override padding/border for righthand side when using "app" (2 col) layout */
+      border:
+        right: none
+      padding-right: 0
+  #inailport-nav-main
+    ul
+      margin-right: 0px
+      
+      
+      
+/* Footer. common to all layouts: grid, app, full
+/* grid used: 4, 4, 6, 4, 6
+.inailport-app, .inailport-full, .inailport-grid
+  #inailport-footer
+    .inailport-footer-main
+      +grid(18,24)
+      +alpha
+      .inailport-footer-logo
+        .inailport-footer-logo-inail
+          +grid(4,24)
+          +alpha
+          a
+            /* replace-text mixin... */
+            +replace-text(unquote("../images/logoINAIL_footer150.png"))
+            display: block
+            height: 30px
+            width: 150px
+        .inailport-footer-logo-divisorio
+          +grid(14,24)
+          +omega
+      .inailport-footer-links
+        +grid(18,24)
+        +alpha
+        +omega
+        .inailport-footer-links-1
+          +grid-prefix(4,24)
+          +grid(4,24)
+          +alpha
+        .inailport-footer-links-2
+          +grid(6,24)
+        .inailport-footer-links-3
+          +grid(4,24)
+          +omega
+    .inailport-footer-sidelinks
+      +grid(6,24)
+      +alpha
+      /* alpha needed for IE6. use padding */
+      padding-left: 5px
+      +omega
+      +has_layout
+    .inailport-footer-copyright
+      +grid(24,24)
+      +alpha
+      +omega
+
+/* END STRUCTURE
+   ***************************************************************
+
+/* SITE LOGO
+
+.inailport-intranet
+  #inailport-logo-site
+    div
+      p
+        height: 59px
+        display: block
+        +replace-text(unquote("../images/header/logoCASAINAIL_header_on.png"))
+        margin-top: 10px
+
+.inailport-punto_cliente
+  #inailport-logo-site
+    div
+      p
+        height: 60px
+        display: block
+        +replace-text(unquote("../images/header/logoPUNTOCLIENTE_header_on.png"))
+        margin-top: 10px
+
+/* NESTED GRID
+   ****************************************************************
+
+//forum box - assumes this box appears in middle column with 525px width available.
+.inailport-forums, .inailport-forums .inailport-row-even, .inailport-forums .inailport-row-odd
+  +grid(13, 24)
+  +alpha
+  +omega
+  width: 525px
+
+.inailport-forums
+  .inailport-forum-name
+    +grid(4, 24)
+    +alpha
+    padding:
+      left: 0.5em
+  .inailport-forum-stats
+    +grid(4, 24)
+  .inailport-forum-last-posted
+    +grid(5, 24)
+    +omega
+    text-align: right
+
+//finanza box - assumes this box appears in middle column with 525px width available.
+.inailport-finanza-dati, .inailport-finanza, .inailport-finanza-dati .inailport-row-even, .inailport-finanza-dati .inailport-row-odd
+  +grid(13, 24)
+  +alpha
+  +omega
+  width: 525px
+
+.inailport-finanza
+  .inailport-finanza-label
+    +grid(11, 24)
+    width: 450px
+  .inailport-finanza-header, .inailport-finanza-cell
+    +grid(2, 24)
+    width: 14%
+  .inailport-finanza-header-wide, .inailport-finanza-cell-wide
+    +grid(3, 24)
+    /* need 17% or else "Data scadenza" is too long
+    width: 17%
+  .inailport-finanza-header-narrow, .inailport-finanza-cell-narrow
+    +grid(1, 24)
+    width: 9%
+  .inailport-finanza-toggle
+    +grid(2, 24)
+    text-align: right
+    width: 8%
+  .inailport-finanza-sublabel
+    +grid(5, 24)
+    /* this has to be calibrated so lines up with first two cells. so if you modify their width, modify this too.
+    width: 33%
+  .inailport-finanza-sublabel-value
+    +grid(8, 24)
+    width: 56%

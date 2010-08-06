@@ -1,0 +1,17 @@
+.inailport-window
+  .inailport-titlebar
+    .inailport-titlebar-title-panel.inailport-titlebar-button-panel
+      Localizzatore RSS
+  .inailport-window-content
+    .inailport-localizzatore
+      %a{:href=>"#",:title=>"cliccare sulla mappa per scegliere un RSS locale",:alt=>"cliccare sulla mappa per scegliere un RSS locale"}
+        %img{:src=>"../../images/contents/rss_map.gif", :alt=>"mappa di RSS", :title=>"mappa di RSS"}
+      %div
+        %span FILTRA PER:
+        %ul
+          %li
+            = link "Ultimi Aggiornamenti &gt;&gt;", "#", :class=>'inailport-localizzatore-first-link'
+          %li
+            = link "I pi&ugrave; visti &gt;&gt;", "#"
+          %li
+            = link "I pi&ugrave; aggiornati &gt;&gt;", "#"

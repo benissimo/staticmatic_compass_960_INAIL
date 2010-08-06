@@ -1,0 +1,8 @@
+.inailport-window.inailport-chromeless
+  .inailport-window-content
+    .inailport-banner
+      -if current_page.include? 'puntocliente'
+        %img{:alt => "Comunicazione unica d'impresa", :src => "../../images/contents/banner.png", :title => "Comunicazione unica d'impresa"}/    
+      -else
+        %a{:href=>"http://siti.inail.it/rivistainfortunimalattieprofessionali/home/home.asp", :title=>"Rivista Infortuni"}
+          %img{:alt => "Rivista Infortuni", :src => "../../images/contents/rimpintranet.jpg", :title => "Rivista Infortuni"}/

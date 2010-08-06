@@ -1,0 +1,12 @@
+%div{:class=>"inailport-window#{if (defined? closed) and closed then ' inailport-window-closed' end}"}
+  .inailport-titlebar
+    .inailport-titlebar-title-panel.inailport-titlebar-button-panel Cerca Persone
+  .inailport-window-content
+    %form#form_cerca_persone.inailport-search-form{:action => "", :method => "post"}
+      %p
+        %label{:for => "cerca_cognome"} Cognome:
+      %p
+        %input#cerca_cognome{:name => "cognome", :tabindex => "20", :title => "inserisci il cognome della persona da ricercare", :type => "text", :value => ""}/
+      %p
+        %input.inailport-form-button{:name => "Cerca", :tabindex => "21", :title => "esegui la ricerca", :type => "button", :value => "Cerca"}/
+        %input.inailport-form-button{:name => "Avanzate", :tabindex => "22", :title => "esegui la ricerca avanzata", :type => "button", :value => "Avanzate"}/

@@ -1,0 +1,40 @@
+/[if !IE]
+  BEGIN: $Id: _header.haml 271 2010-04-08 09:55:27Z bellis $
+  ===============================
+  header: section A
+#inailport-header
+  =partial('includes/nav_interna')
+  /[if !IE]
+    A1 - accessibility (toolbar)
+  #inailport-access
+    =partial('includes/access')
+  /[if !IE]
+    A2 - INAIL logo
+  #inailport-logo-inail
+    =partial('includes/logo_inail')
+    -if @show_snippets
+      /[if !IE]
+        *****Example using "replace-text" mixin. (hides text, applies background image...)
+      %div
+        %p.inailport-replace INAIL logo
+  /[if !IE]
+    A3 - user login / welcome message / etc.
+  #inailport-user
+    -if @show_login_form
+      =partial('includes/login_utente')
+    -else
+      =partial('includes/user_area')
+  /[if !IE]
+    site logo
+  #inailport-logo-site
+    %div
+      %p site logo
+  /[if !IE]
+    A4 - extra navigation
+  #inailport-nav-extra
+    =partial('includes/nav_extra')
+  #inailport-breadcrumb
+    =partial('includes/breadcrumb')
+/[if !IE]
+  END: $Id: _header.haml 271 2010-04-08 09:55:27Z bellis $
+  ===============================

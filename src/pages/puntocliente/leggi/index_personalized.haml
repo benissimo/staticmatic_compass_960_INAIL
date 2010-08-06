@@ -1,0 +1,24 @@
+-# assign variables
+- @title = 'Leggi'
+- @wrapper_class = 'grid' #3 column grid
+- @site_class = 'punto_cliente'
+= partial('includes/setup')
+- @portlets = {'left'=>[],'right'=>[],'middle'=>[]}
+
+- @portlets['left'].push({'name'=>'stato_servizi'})
+- @portlets['left'].push({'name'=>'calendario'})
+- @portlets['left'].push({'name'=>'campagne','opts'=>{'closed'=>1}})
+- @portlets['left'].push({'name'=>'spazio_media','opts'=>{'closed'=>1}})
+
+- @portlets['middle'].push({'name'=>'news','opts'=>{'title'=>'Sala Stampa'}})
+- @portlets['middle'].push({'name'=>'forum'})
+- @portlets['middle'].push({'name'=>'finanza'})
+
+- @portlets['right'].push({'name'=>'avvisi_utenza','opts'=>{'closed'=>1}})
+- @portlets['right'].push({'name'=>'localizzatore_rss'})
+- @portlets['right'].push({'name'=>'piu_ricercati'})
+- @portlets['right'].push({'name'=>'piu_visti'})
+
+
+-# render markup
+= partial('includes/page')

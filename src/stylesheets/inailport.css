@@ -1,0 +1,789 @@
+body{
+	font-family:tahoma, sans-serif, arial narrow;
+
+}
+
+
+.inailport-window   {
+	border-style:solid;
+	border-width:1px;
+	border-color:  #666666;
+	background-color:#FFFFFF;
+	display:block;
+	/*margin-left:0.2em;*/
+	margin-bottom:0.5em;
+	/*word-spacing:-0.07em;*/
+	word-spacing:0.03em;
+	padding:0;
+}
+
+.inailport-titlebar {
+	overflow:hidden;	
+	display:block;
+	/*font-family:tahoma;*/
+	/*IE font-size:1.05em; */
+	font-size:0.8em;
+	margin:0;
+	text-align:left;
+	text-decoration:none;
+	height: 20px;
+	line-height : 20px;
+	/*************************/
+	color: #000000;
+	border: 0.2em solid #B3CCDC;
+	background-color: #B3CCDC;
+}
+
+.inailport-titlebar-title-panel{
+	white-space:nowrap;
+
+}
+.inailport-titlebar-button-panel{
+	background:url("../images/contents/newChiudiBTN.gif") no-repeat scroll right center;
+	background-color:#B3CCDC;
+}
+
+.inailport-window-content{
+	margin-left:0.2em;
+}
+
+.inailport-window-content{
+	font-family:Arial,Helvetica,sans-serif;
+	font-size:0.7em;
+	font-style:normal;
+	font-variant:normal;
+	color:#000000;
+}
+
+/*.inailport-window-content-footer {
+	font-family:Arial,Helvetica,sans-serif;
+	font-size:11px;
+	font-style:italic;
+	font-variant:normal;
+	color:#000000;
+	text-decoration: none;
+	font-weight: normal;
+	
+	
+}*/
+
+
+.inailport-window-content-link-follow a{
+	font-family:Arial,Helvetica,sans-serif;
+	font-size:11px;
+	font-style:italic;
+	font-variant:normal;
+	color:#000000;
+	text-decoration: none;
+	font-weight: normal;
+	
+	
+}
+
+/***************  PRIMO PIANO *********************/
+.inailport-primo-piano div.inailport-titlebar {
+	/*color: #000000;
+	border: 0.2em solid #B3CCDC;
+	background-color: #B3CCDC;*/
+}
+
+.inailport-primo-piano .inailport-titlebar-button-panel{
+	/*background-color:#B3CCDC;*/
+}
+
+.inailport-primo-piano div.inailport-window-content{
+		/*font-weight:bold;*/	
+		margin-left:0.9em;
+}
+
+.inailport-primo-piano div.inailport-window-content p{
+		margin-bottom:0.5em;
+}
+
+/***************  AVVISI *********************/
+.inailport-avvisi div.inailport-titlebar {
+	color: #FFFFFF;
+	border: 0.2em solid #9E1810;
+	background-color: #9E1810;
+}
+
+.inailport-avvisi .inailport-titlebar-button-panel{
+	background-color:#9E1810;
+}
+
+.inailport-avvisi div.inailport-window-content{
+	font-weight:normal;
+	word-spacing:0.5em;	
+}
+/***************  MEDIA  CAMPAGNE ******************** #inailport-media #inailport-campagne */
+/*.inailport-media div.inailport-titlebar {
+	color: #000000;
+	border: 0.2em solid #B3CCDC;
+	background-color: #B3CCDC;
+}
+
+.inailport-media .inailport-titlebar-button-panel{
+	background-color:#B3CCDC;
+}*/
+
+.inailport-media {	
+		border:none !important; 
+}
+
+.inailport-media div.inailport-window-content img{
+	width:101%;
+	margin-left:-0.2em
+	
+}
+/***************  MEDIA  CAMPAGNE ******************** #inailport-media #inailport-campagne */
+/*.inailport-campagne div.inailport-titlebar {
+	color: #000000;
+	border: 0.2em solid #B3CCDC;
+	background-color: #B3CCDC;
+}
+
+.inailport-campagne .inailport-titlebar-button-panel{
+	background-color:#B3CCDC;
+}
+
+.inailport-campagne {
+	
+		border:none !important; 
+}
+
+.inailport-campagne div.inailport-window-content img{
+	width:101%;
+	margin-left:-0.2em
+	
+}*/
+/***************  NEWS*********************/
+.inailport-news div.inailport-titlebar {
+	color: #FFFFFF;
+	border: 0.2em solid #003F82;
+	background-color: #003F82;
+}
+
+
+.inailport-news div.inailport-window-content{
+		font-weight:normal;	
+		font-family: Arial;
+		font-size: 1.1em;
+}
+.inailport-news {
+	
+		border:none !important; 
+}
+
+.inailport-news  .inailport-window-content-link-follow{
+	padding-bottom: 0.5em;
+	padding-top:0.7em;
+	
+}
+
+.inailport-news .inailport-window-content  ul{
+	margin-top:0.5em;
+	padding-left:0;
+	margin-left:0;
+	
+}
+
+.inailport-news .inailport-window-content ul li{
+	background-image:none;
+	list-style-image:none;
+	list-style-position:outside;
+	list-style-type:none;
+	margin:0;
+	font-size:12px;
+	border-bottom:1px solid #ccc;
+	padding-top:1em;
+	padding-bottom:1.5em;
+}
+
+.inailport-news .inailport-window-content ul li a{
+	text-decoration:none;
+	font-weight:bold;
+	color:#000000;
+}
+
+.inailport-news .inailport-window-content-art{
+	font-style:normal;
+	font-variant:normal;
+	font-weight:normal;
+	font-size:12px;
+
+}
+
+.inailport-news .inailport-window-content-link-follow a.inailport-window-content-link-follow-left{	
+	font-weight:normal !important;
+	float:left;
+	
+	
+}
+
+.inailport-news .inailport-window-content-link-follow-right{
+	float:right;
+	height:0.8em;
+	font-size: 11px;
+}
+
+.inailport-news .inailport-window-content-link-follow-right .inailport-window-content-footer-right-tags{
+	color:#003F82;
+}
+
+/***************   STRUMENTI  ********************/
+
+/*.inailport-strumenti div.inailport-titlebar {
+	color: #000000;
+	border: 0.2em solid #B3CCDC;
+	background-color: #B3CCDC;
+}
+*/
+
+.inailport-strumenti .inailport-window-content ul{
+	padding:0;
+	margin:0.6em 0 1em;
+}
+
+.inailport-strumenti .inailport-window-content ul li{
+
+	background-image:url("../images/contents/freccina.png");
+	background-position:0.4em;
+	background-repeat:no-repeat;
+	list-style-image:none;
+	list-style-position:outside;
+	list-style-type:none;
+	margin:0;
+	text-indent:1.5em;
+	font-family:Arial;
+	font-size:11px;
+	font-style:normal;
+	font-variant:normal;
+	font-weight:normal;
+
+}
+
+/*********************************************/
+#inailport-vertical-nav ul.inailport-link-list{
+	padding:0.5em;
+	margin:0.6em 0 1em;
+	border-left:1px solid #ccc;
+}
+
+ul.inailport-link-list  li{
+
+	background-image:url("../images/contents/freccina.png");
+	background-position:left 20%;
+	background-repeat:no-repeat;
+	font-family:Arial;
+	font-size:11px;
+	font-style:normal;
+	font-weight:normal;
+	list-style-image:none;
+	list-style-position:outside;
+	list-style-type:none;
+	margin:0;
+
+}
+ul.inailport-link-list li a{
+	color:#000000;
+	display:block;
+	margin-left:2px;
+	padding-left:10px;
+	text-align:left;
+	text-decoration:none;
+}
+
+
+/***************   BANNER    *************/
+.inailport-banner img{
+	width:101%;
+	margin-left:-0.2em
+}
+
+ .inailport-window.inailport-banner {
+	border: 0;
+
+}
+
+/***************  FOTO_APERTURA   *************/
+.inailport-foto-apertura img{
+/*	height:194px;
+	width:443px;*/
+}
+
+ .inailport-window.inailport-foto-apertura {
+	border: 0;
+
+}
+
+/***************CLOUDS **********************/
+/*.inailort-cloud-tag div.inailport-titlebar {
+	color: #000000;
+	border: 0.2em solid #B3CCDC;
+	background-color: #B3CCDC;
+}
+
+.inailport-cloud-tag .inailport-titlebar-button-panel{
+	background-color:#B3CCDC;
+}*/
+
+.inailport-cloud-tag div.inailport-window-content{
+	font-weight:bold;	
+	/*margin:-0.6em 0 -1em;*/
+}
+
+.inailport-cloud-tag ul{
+ 	padding: 2px; 
+	line-height:1.5em; 
+	text-align: center;
+	text-align:justify;
+	margin-left:0;
+}
+.inailport-cloud-tag ul li{ 
+	display: inline;  
+}
+
+.inailport-cloud-tag ul li a{
+	color: #208EF2;
+	font-family: Arial;
+	padding: 0px;
+	text-decoration:none;
+}
+.inailport-cloud-tag ul li a.inailport-tagcloud-1 { font-size: 0.9em;  }
+
+.inailport-cloud-tag  ul li  a.inailport-tagcloud-2 { font-size: 1.1em;  }
+
+.inailport-cloud-tag  ul li  a.inailport-tagcloud-3 { font-size: 1.3em; }
+
+.inailport-cloud-tag a.inailport-tagcloud-4 { font-size: 1.5em; }
+
+
+/***************MENU TAB**********************/
+/*
+.inailport-menu-tab{
+	padding: 4px 0;
+	margin-left: 0;
+	font: normal 12px arial;
+	border-bottom: 1px solid #666666;
+	list-style-type: none;
+	text-align: left; 
+}
+
+.inailport-menu-tab li{
+	display: inline;
+	margin: 0;
+}
+
+.inailport-menu-tab li a{
+	text-decoration: none;
+	margin-right: 4px;
+	border: 1px solid #666666;
+	border-bottom: none;
+	background: url("../images/contents/fondoBTN.png") repeat-x;
+	color: #000000;
+	padding:4px 1.3em;
+}
+
+.inailport-menu-tab li a:active{
+	color: black;
+}
+
+.inailport-menu-tab li.selected a{ 
+	position: relative;
+	top: 1px;
+	background-color: #DBFF6C;
+	background: url("../images/contents/fondoActiveBTN.png") repeat-x;	
+	padding-top:0.8em;
+	font-weight:bold;
+	cursor:default;
+}*/
+
+ div#inailport-nav-main ul {
+	border-bottom:1px solid #666666;
+	font: normal 12px arial;
+	font-size-adjust:none;
+	font-stretch:normal;
+	font-style:normal;
+	font-variant:normal;
+	line-height:normal;
+	list-style-type:none;
+	margin:6px 0 0;
+	padding-bottom:5px;
+	position:relative;
+	text-align:left;
+	margin-bottom: 0.5em;
+	margin-right:10px;
+}
+
+div#inailport-nav-main li {
+	display:inline;
+	margin:0;
+}
+div#inailport-nav-main ul li.selected a {
+	background:url("../images/contents/fondoActiveBTN.png") repeat-x;	
+	color:#000000;
+	padding-top:6px;
+	position:relative;
+	top:1px;
+	cursor:default;
+	text-decoration: none;
+}
+
+div#inailport-nav-main ul li a {
+	background:url("../images/contents/fondoBTN.png") repeat-x;
+	border-left:1px solid #666666;
+	border-right:1px solid #666666;
+	border-top:1px solid #666666;
+	color:#000000;
+	margin-right:0;
+	padding:5px 10px;
+	position:relative;
+	text-decoration:none;
+}
+
+
+
+/*************BREADCRUMB*********************/
+#inailport-breadcrumb{
+	margin-top:2em;
+ 	font-size :9px;
+	font-weight:normal;
+	height: 2em;
+	margin: 0.7em 0;
+}
+
+#inailport-breadcrumb ul{
+	vertical-align: middle;
+	padding-left:0;
+	/*font-family: tahoma;*/
+	font-size: 1.1em;
+margin-left:0;
+}
+
+#inailport-breadcrumb ul li{
+	margin:0;
+	padding:0;
+	display:inline;
+	color:black;
+	font-weight:normal;
+}
+
+#inailport-breadcrumb ul li a{
+	text-decoration : none;
+	color: #000000;
+
+}
+
+/*************NAV EXTRA***************/
+#inailport-nav-extra{  /*proprieta date dal layout*/
+	background-color:#003F82;
+	height:1.1em;
+	line-height:0.5em;
+	margin-left:0.2em;
+	padding-bottom:0.3em;
+	padding-top:0.3em;
+	width:100%;
+	word-spacing:-0.07em;
+}
+
+#inailport-nav-extra ul{
+	list-style-image:none;
+	list-style-position:outside;
+	list-style-type:none;
+	margin:0.2em 0.5em 0.5em 0;
+	padding-left:0.5em;	
+	text-align:left;	
+}
+
+#inailport-nav-extra ul li
+{
+	color:#FFFFFF;
+	margin:0;
+	padding:0;
+	display:inline;
+	vertical-align: middle;
+	padding-right:0.2em;
+	padding-left:0.2em;
+}
+#inailport-nav-extra ul li a
+{
+	text-decoration : none;
+	color:#FFFFFF;
+	/*font-family: tahoma;*/
+	font-weight: bold;
+	font-size:0.8em;
+		padding-right:0.2em;
+	padding-left:0.2em;
+}
+
+
+/****************************    DIV ACCESS **********************/
+#inailport-access {
+	background-color:#DFDFDF;
+	border-bottom:2px solid #313B4D;
+	font-family:Arial;
+	font-style:normal;
+	font-weight:normal;
+	height:auto !important;
+	min-height:1.8em;	
+	line-height: 2em;					
+}
+
+#inailport-grandezza-carattere{
+	/*min-width: 10%;*/
+	margin-left:1em;
+	border:0 none;
+	float:left;
+	height:auto !important;
+	min-height:1%;
+	font-size:12px;
+	/*text-align:center;*/
+}
+
+#inailport-grandezza-carattere ul {
+	margin:0;
+	padding:0;
+}
+
+#inailport-grandezza-carattere ul li {
+	display : inline;
+	padding:0 0.3em;
+	
+	}
+
+#inailport-grandezza-carattere a, #navlist a:link {
+	color: #000000;
+	text-decoration :none;
+}
+
+#inailport-grandezza-carattere a:hover {
+	text-decoration:underline;
+}
+#inailport-access-ricerca-links{
+	float:right;
+	text-align:right;
+	font-size: 10px;
+}
+
+
+.inailport-access-ricerca {	
+	width: 40%;
+	height:auto !important;
+	display: inline;	
+	margin: 0;	
+}
+
+.inailport-access-ricerca input {
+	width:  6em;
+	height: 80%;
+	margin-right:0.4em;
+}
+
+.inailport-access-ricerca a{
+	color: #000000;
+	text-decoration :none;
+}
+
+.inailport-elementodivisorio{
+	padding-left:5px;
+	padding-right:5px;
+}
+
+.inailport-access-links{
+	width: 60%;
+	display: inline;	
+	height:auto !important;
+	margin:0 0 0 1em;
+	text-align:right;
+	
+}
+
+.inailport-access-links a{
+	color: #000000;
+	text-decoration :none;
+	padding-left:10px;
+}
+
+
+.inailport-access-links img{
+	margin-bottom:0.5em;
+	padding-left:10px;
+	padding-right:10px;
+	vertical-align:middle;
+	border:none;					
+}
+
+.inailport-access-links a img{
+	
+	padding-left:3px;
+	padding-right:10px;
+	vertical-align:middle;
+	border:none;
+	margin-bottom:0;
+
+}
+
+.inailport-access-links img.freccia{
+	width:4px;
+	height:7px;
+}
+
+/******************BARRA CENTRALE *************************/
+
+#inailport-logo-inail {
+	width: 220px;
+	height:90px;
+	background-position:left top;
+	background-repeat:no-repeat;
+	display:block;
+	left:20px;
+	background: url(../images/header/logoINAIL_header.png) no-repeat scroll center center transparent;
+}
+
+#inailport-logo-inail a#logo-inail {
+	text-decoration: none;
+	cursor:pointer;
+}
+
+#inailport-logo-inail a#logo-inail img{
+	display: none;
+}
+
+/******************  USER AREA ************************/
+#inailport-user div{
+	margin-top:1em;
+	/*font-family:tahoma;*/
+}
+
+
+#inailport-user-info{
+	width:100%;
+	border-bottom: 2px solid #313B4D;	
+	font-size: 1em;
+}
+
+#inailport-user-info{
+	list-style-image:none;
+}
+
+#inailport-user-info li{
+	display:inline;
+}
+
+#inailport-user-info  .inailport-user-profilo{
+	background-color: #B3CCDC;
+	margin-bottom: 0px;
+	font-size: 0.8em;
+	padding:0.2em 0.5em 0.3em 1em;
+}
+
+#inailport-user-info  .inailport-user-benvenuto{
+	padding-left: 10px;
+	font-weight: bold;
+	height:20px;
+	line-height:20px;	
+	font-size:0.6em;					
+	
+}
+/**************************/
+
+#inailport-user-function{
+	font-weight: normal;
+	font-size:0.6em;
+	padding-left:1em;
+}
+
+
+#inailport-user-function a{
+	color:#000000;
+	text-decoration:none;
+	
+}
+
+#inailport-user-function a img{
+	padding-left: 0.2em;
+}
+/**************************************/
+
+#inailport-claimInail{
+	display: inline;
+	float: left;
+	width: 416px;
+	height: 13px;
+	background: transparent url(../images/header/claimINAIL.png) no-repeat scroll bottom;
+	margin: 15px 0 0;
+}
+
+span.bold{
+	font-weight: bold;
+}
+
+/**********************************************/
+/*inailport-user-login*/
+#inailport-user-login{
+	width:100%;
+	border-bottom: 2px solid #313B4D;	
+	font-size: 0.8em;
+	list-style-image:none;
+	padding-bottom:0.2em;
+}
+
+#inailport-user-login li{
+	display:inline;
+	margin-right:0.4em;
+	padding-left:1em;
+}
+
+#inailport-user-login li input.inailport-user-login-input{
+	margin-left:0.2em;
+	width:8em;
+}
+
+
+
+/************** FOOTER   *******************/
+#inailport-footer .inailport-footer-bottom{
+	height: 18px;
+	background: transparent url(../images/contents/footer_center.gif) repeat-x scroll bottom;
+	width: inherit;
+}
+
+
+#inailport-footer .inailport-footer-bottom .inailport-footer-bottom-corner-left{
+	marging : 0;
+	padding : 0;
+	float :left;
+
+}
+
+#inailport-footer  .inailport-footer-bottom .inailport-footer-bottom-corner-right{
+	marging : 0;
+	padding : 0;
+	float: right;
+
+}
+#inailport-footer .inailport-footer-copyright
+{
+	text-align: center;
+	font-size : 0.7em;
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+#inailport-footer .inailport-footer-logo{
+	margin-top:1em;
+}
+#inailport-footer div.inailport-footer-logo .inailport-footer-logo-divisorio{
+	background-color:#DFDFDF;
+	border-bottom:2px solid #313B4D;
+	float:right;
+	height:2em;
+	width:87%;
+
+}
+#inailport-footer .inailport-footer-logo .inailport-footer-logo-inail{
+	float:left;
+	background: url(../images/contents/logoInail_small.gif) no-repeat scroll center center transparent;
+	height:34px;
+	width:107px;
+
+}

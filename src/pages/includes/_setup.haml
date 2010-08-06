@@ -1,0 +1,4 @@
+-# $Id$ Setup...
+- @conf = YAML::load(File.open(File.expand_path(File.dirname(__FILE__)+'/src/inail_conf.yaml')))
+- @path = current_page.split('/')
+- @photo = @path[1].sub(/casainail/,'intranet') + '_' + @path[2] #current_page.sub(/([^\/]+)\/([^\/]+).*/,'\1_'+('\2')).sub(/casainail/,'intranet')

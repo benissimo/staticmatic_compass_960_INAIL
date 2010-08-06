@@ -1,0 +1,50 @@
+-# Currently only one case where navigation is 3 levels: /casainail/applicazioni/ambiente.html
+-# All others are always 2 levels: /[casinail|puntocliente]/[...]/[index.html|index_autenticato.html]
+%ul
+  %li.inailport-breadcrumb-prompt
+    Stai consultando:&nbsp;
+  %li
+    %a{ :href => "#", :title => "torna alla homepage", :class=>"inailport-bold" }
+      Home
+    &gt;&nbsp;
+  %li
+    /* no homepages defined for casainail, internet, puntocliente so we use their "first pages"
+    -if @path[1] == 'casainail'
+      %a{ :href => "/casainail/personale/", :title => "torna su" }
+        Casa INAIL
+    -elsif @path[1] == 'internet'
+      /* no homepage for internet version of casainail. (no pagina "personale")
+      %a{ :href => "#", :title => "torna su" }
+        Casa INAIL
+    -else
+      %a{ :href => "/puntocliente/leggi/", :title => "torna su" }
+        Punto Cliente
+    &gt;&nbsp;
+  %li<>
+    -if (@path[3].include? 'ambiente') or (@path[3].include? 'consultazione')
+      %a{ :href => "/#{@path[1]}/#{@path[2]}/", :title => "torna a #{@path[2].capitalize}" }<>
+        #{@path[2].capitalize}
+      &gt;&nbsp;
+    -else
+      #{@path[2].capitalize}      
+  -if @path[3] == 'ambiente.html'
+    %li
+      -#%a{ :href => "#", :title=> ""}
+      Ambiente Controllo di Gestione
+  -elsif @path[3] == 'consultazione.html'
+    %li
+      Consultazione
+  -elsif @path[3] == 'consultazione_anagrafica.html'
+    %li
+      %a{ :href => "/#{@path[1]}/#{@path[2]}/consultazione.html", :title=> ""}
+        Consultazione
+      &gt;&nbsp;
+    %li
+      Anagrafica  
+  -elsif @path[3] == 'ambiente_orso.html'
+    %li
+      %a{ :href => "/#{@path[1]}/#{@path[2]}/ambiente.html", :title=> ""}
+        Ambiente Controllo di Gestione
+      &gt;&nbsp;
+    %li
+      Procedura O.R.S.O.

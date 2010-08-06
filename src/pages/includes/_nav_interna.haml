@@ -1,0 +1,24 @@
+%a{:accesskey => "h", :href => "http://www.inail.it", :tabindex => "1", :title => "torna alla home page di INAIL"}
+  %img.inailport-hidden{:alt => "INAIL Istituto Nazionale Assicurazione sul Lavoro", :src => "../../images/header/logoINAIL_bn.png", :title => "INAIL Istituto Nazionale Assicurazione sul Lavoro"}/
+%h1 INAIL
+%h2#inailport-navinterna.inailport-hidden Men&ugrave; di navigazione interna alla pagina
+%ul.inailport-hidden
+  %li
+    %a{:accesskey => "1", :href => "#inailport-main", :title => "vai al contenuto di questa pagina"} Contenuto della pagina
+    (accesskey: 1)
+  %li
+    %a{:accesskey => "c", :href => "#inailport-access-ricerca-links", :title => "vai alla ricerca nel sito"} Ricerca
+    (accesskey: c)
+  -if @show_user_login_form
+    %li
+      %a{:accesskey => "l", :href => "#inailport-login", :title => "vai al modulo per il login e la registrazione"} Accesso pagina personale
+      (accesskey: l)
+  %li
+    %a{:accesskey => "2", :href => "#inailport-nav-main", :title => "vai al men&ugrave; di navigazione del portale"} Navigazione del portale
+    (accesskey: 2)
+  %li
+    %a{:accesskey => "3", :href => "#inailport-nav-extra", :title => "vai ai servizi e informazioni"} Servizi e informazioni
+    (accesskey: 3)
+  %li
+    %a{:accesskey => "5", :href => "#inailport-footer", :title => "vai al men&ugrave; delle informazioni generali sul sito"} Informazioni generali sul sito
+    (accesskey: 5)

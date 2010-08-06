@@ -1,0 +1,17 @@
+%div
+  %ul#inailport-user-info
+    %li.inailport-user-benvenuto
+      %span 
+        Benvenuto, Andrea Passavanti (yels016) &nbsp;/&nbsp;
+      %a{:href => "#", :title => "uscita", :class => "inailport-text-link"} Uscita
+    %li
+      %span.inailport-user-profilo
+        Profilo&nbsp;
+        %span.inailport-bold<>
+          -if ((@path[1] == 'casainail') || (@path[1] == 'internet'))
+            DIPENDENTE
+          -else
+            DATORI DI LAVORO
+      %a{:href => "#", :title => "modifica profilo", :class => "inailport-text-link"}
+        Modifica profilo  
+#inailport-claimInail

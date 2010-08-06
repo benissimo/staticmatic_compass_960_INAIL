@@ -1,0 +1,155 @@
+- @layout = 'empty'
+- @title = 'Layout Task List'
+/
+  $Id: index.haml 681 2010-05-25 13:31:28Z bellis $
+%h1 layouts
+%h2 skeletons
+%ul
+  %li 
+    =link "grid","skeleton/grid.html"
+    1st draft complete, waiting on feedback
+  %li 
+    =link "full","skeleton/full.html"
+    1st draft complete, waiting on feedback
+  %li
+    =link "app","skeleton/app.html"
+    1st draft complete, waiting on feedback
+%h2 mockups
+%h3 casa inail
+%ul
+  %li 
+    =link "applicazioni","casainail/applicazioni/"
+  %ul
+    %li
+      =link "ambiente controllo di gestione", "casainail/applicazioni/ambiente.html"
+      %ul
+        %li
+          =link "procedura O.R.S.O.", "casainail/applicazioni/ambiente_orso.html"
+  %li 
+    =link "community","casainail/community/"
+  %li 
+    =link "minisiti","casainail/minisiti/"
+  %li 
+    =link "personale","casainail/personale/"
+    %ul
+      %li
+        =link "personale (personalizzato)", "casainail/personale/index_personalized.html"
+  %li 
+    =link "servizi","casainail/servizi/"
+    %ul
+      %li
+        %s
+          =link "servizi non autenticato (obsoleto)","casainail/servizi/index_login_obsolete.html"
+  %li 
+    =link "web tematici","casainail/web_tematici/"
+  %li
+    =link "my page","casainail/my/"
+    (new page, stub)
+%h3 casa inail su internet
+%ul
+  %li
+    =link "applicazioni","internet/applicazioni/"
+  %li
+    =link "community","internet/community/"
+
+%h3 punto cliente
+%ul
+  %li 
+    =link "leggi","puntocliente/leggi/"
+    %ul
+      %li
+        =link "leggi (personalizzato)","puntocliente/leggi/index_personalized.html"
+  %li 
+    =link "partecipa","puntocliente/partecipa/"
+  %li 
+    =link "utilizza","puntocliente/utilizza/"
+    with login form in header (slide 7)
+    %ul
+      %li
+        =link "utilizza (autenticato)", "puntocliente/utilizza/index_autenticato.html"
+      %li
+        =link "utilizza (autenticato) with new button style applied to the portlet 'pi&ugrave; ricercati'", "puntocliente/utilizza/index_autenticato_new_button.html"
+        NB: the static version of the javascript for this page does not update the portlet. This is an example of the markup requested for use with Oracle Portal's buttons.
+    %ul
+      %li
+        =link "consultazione", "puntocliente/utilizza/consultazione.html"
+        %ul
+          %li
+            =link "anagrafica ditta", "puntocliente/utilizza/consultazione_anagrafica.html"
+%h2 components
+%h3 shared
+%ul
+  %li 
+    header
+    %ul
+      %li 
+        %s access
+      %li 
+        %S logo_inail
+      %li 
+        %s user_area
+        %ul
+          %li 
+            %s user_area login form
+          %li 
+            %s user_area welcome message
+      %li 
+        %s logo_site
+      %li 
+        %s nav_extra - different links for puntocliente and casainail. 
+      %li 
+        %s breadcrumb
+  %li 
+    %s nav_main
+  %li 
+    %s vertical_nav
+  %li 
+    %s campagne
+  %li 
+    %s spazio_media
+  %li 
+    %s foto_apertura
+  %li 
+    %s news
+  %li 
+    %s avvisi_utenza
+  %li 
+    %s banner
+  %li 
+    %s primopiano
+  %li 
+    %s strumenti
+    %ul
+      %li 
+        %s cerca persone
+      %li 
+        %s cerca strutture
+  %li 
+    %s piu_ricercati
+  %li 
+    %s footer
+  
+%h3 casa inail
+%ul
+  %li 
+    %s gestione_ofa, cruscotto_economico, procedura_orso
+  %li 
+    %s banner punto cliente
+
+
+%h3 punto cliente
+%ul
+  %li 
+    %s forum
+  %li 
+    %s finanza
+  %li 
+    %s localizzatore_rss
+  %li 
+    %s calendario
+  %li 
+    %s stato_servizi
+  %li 
+    %s piu_visti
+  %li 
+    %s sala_stampa

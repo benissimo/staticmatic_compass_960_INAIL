@@ -1,0 +1,24 @@
+-if current_page.include? '/casainail/'
+  = #@conf.inspect
+  - @main_nav = @conf['nav']['main']['casa_inail']
+-elsif current_page.include? '/internet/'
+  - @main_nav = @conf['nav']['main']['internet']
+-else
+  - @main_nav = @conf['nav']['main']['punto_cliente']
+
+- unless @main_nav.nil? 
+  %h2.inailport-hidden Navigazione del Portale
+  %ul
+    - @main_nav.each do |e|
+      -if current_page.include? e['href']
+        %li{:class=>:selected}
+          %a{:href => "#{e['href']}", :title=> "entra in #{e['label']}"}<>
+            = e['label']
+      -else 
+        %li
+          -if e['href'] == '#'
+            %a{:href => "#{e['href']}", :title=> "entra in #{e['label']}", :class=>'inailport-nav-main-nolink'}<>
+              = e['label']
+          -else
+            %a{:href => "#{e['href']}", :title=> "entra in #{e['label']}"}<>
+              = e['label']
