@@ -1,0 +1,237 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html lang="it" xml:lang="it" xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <title>
+      Layout Task List
+    </title>
+    <meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+    
+  </head>
+  <body>
+    <!--
+      $Id: index.haml 681 2010-05-25 13:31:28Z bellis $
+    -->
+    <h1>layouts</h1>
+    <h2>skeletons</h2>
+    <ul>
+      <li>
+        <a href="skeleton/grid.html">grid</a>
+        1st draft complete, waiting on feedback
+      </li>
+      <li>
+        <a href="skeleton/full.html">full</a>
+        1st draft complete, waiting on feedback
+      </li>
+      <li>
+        <a href="skeleton/app.html">app</a>
+        1st draft complete, waiting on feedback
+      </li>
+    </ul>
+    <h2>mockups</h2>
+    <h3>casa inail</h3>
+    <ul>
+      <li>
+        <a href="casainail/applicazioni/">applicazioni</a>
+      </li>
+      <ul>
+        <li>
+          <a href="casainail/applicazioni/ambiente.html">ambiente controllo di gestione</a>
+          <ul>
+            <li>
+              <a href="casainail/applicazioni/ambiente_orso.html">procedura O.R.S.O.</a>
+            </li>
+          </ul>
+        </li>
+      </ul>
+      <li>
+        <a href="casainail/community/">community</a>
+      </li>
+      <li>
+        <a href="casainail/minisiti/">minisiti</a>
+      </li>
+      <li>
+        <a href="casainail/personale/">personale</a>
+        <ul>
+          <li>
+            <a href="casainail/personale/index_personalized.html">personale (personalizzato)</a>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <a href="casainail/servizi/">servizi</a>
+        <ul>
+          <li>
+            <s>
+              <a href="casainail/servizi/index_login_obsolete.html">servizi non autenticato (obsoleto)</a>
+            </s>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <a href="casainail/web_tematici/">web tematici</a>
+      </li>
+      <li>
+        <a href="casainail/my/">my page</a>
+        (new page, stub)
+      </li>
+    </ul>
+    <h3>casa inail su internet</h3>
+    <ul>
+      <li>
+        <a href="internet/applicazioni/">applicazioni</a>
+      </li>
+      <li>
+        <a href="internet/community/">community</a>
+      </li>
+    </ul>
+    <h3>punto cliente</h3>
+    <ul>
+      <li>
+        <a href="puntocliente/leggi/">leggi</a>
+        <ul>
+          <li>
+            <a href="puntocliente/leggi/index_personalized.html">leggi (personalizzato)</a>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <a href="puntocliente/partecipa/">partecipa</a>
+      </li>
+      <li>
+        <a href="puntocliente/utilizza/">utilizza</a>
+        with login form in header (slide 7)
+        <ul>
+          <li>
+            <a href="puntocliente/utilizza/index_autenticato.html">utilizza (autenticato)</a>
+          </li>
+          <li>
+            <a href="puntocliente/utilizza/index_autenticato_new_button.html">utilizza (autenticato) with new button style applied to the portlet 'pi&ugrave; ricercati'</a>
+            NB: the static version of the javascript for this page does not update the portlet. This is an example of the markup requested for use with Oracle Portal's buttons.
+          </li>
+        </ul>
+        <ul>
+          <li>
+            <a href="puntocliente/utilizza/consultazione.html">consultazione</a>
+            <ul>
+              <li>
+                <a href="puntocliente/utilizza/consultazione_anagrafica.html">anagrafica ditta</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+    </ul>
+    <h2>components</h2>
+    <h3>shared</h3>
+    <ul>
+      <li>
+        header
+        <ul>
+          <li>
+            <s>access</s>
+          </li>
+          <li>
+            <S>logo_inail</S>
+          </li>
+          <li>
+            <s>user_area</s>
+            <ul>
+              <li>
+                <s>user_area login form</s>
+              </li>
+              <li>
+                <s>user_area welcome message</s>
+              </li>
+            </ul>
+          </li>
+          <li>
+            <s>logo_site</s>
+          </li>
+          <li>
+            <s>nav_extra - different links for puntocliente and casainail.</s>
+          </li>
+          <li>
+            <s>breadcrumb</s>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <s>nav_main</s>
+      </li>
+      <li>
+        <s>vertical_nav</s>
+      </li>
+      <li>
+        <s>campagne</s>
+      </li>
+      <li>
+        <s>spazio_media</s>
+      </li>
+      <li>
+        <s>foto_apertura</s>
+      </li>
+      <li>
+        <s>news</s>
+      </li>
+      <li>
+        <s>avvisi_utenza</s>
+      </li>
+      <li>
+        <s>banner</s>
+      </li>
+      <li>
+        <s>primopiano</s>
+      </li>
+      <li>
+        <s>strumenti</s>
+        <ul>
+          <li>
+            <s>cerca persone</s>
+          </li>
+          <li>
+            <s>cerca strutture</s>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <s>piu_ricercati</s>
+      </li>
+      <li>
+        <s>footer</s>
+      </li>
+    </ul>
+    <h3>casa inail</h3>
+    <ul>
+      <li>
+        <s>gestione_ofa, cruscotto_economico, procedura_orso</s>
+      </li>
+      <li>
+        <s>banner punto cliente</s>
+      </li>
+    </ul>
+    <h3>punto cliente</h3>
+    <ul>
+      <li>
+        <s>forum</s>
+      </li>
+      <li>
+        <s>finanza</s>
+      </li>
+      <li>
+        <s>localizzatore_rss</s>
+      </li>
+      <li>
+        <s>calendario</s>
+      </li>
+      <li>
+        <s>stato_servizi</s>
+      </li>
+      <li>
+        <s>piu_visti</s>
+      </li>
+      <li>
+        <s>sala_stampa</s>
+      </li>
+    </ul>
+  </body>
+</html>
